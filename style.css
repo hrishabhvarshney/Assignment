@@ -17,6 +17,7 @@ body {
   width: 55%;
   left: 0;
   background-color: #15181b;
+  overflow: hidden;
 }
 .mid {
   height: 100%;
