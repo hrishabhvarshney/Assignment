@@ -1,0 +1,280 @@
+/* Split the screen in half */
+.split {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+/* Control the left side */
+.left {
+  height: 100%;
+  width: 55%;
+  left: 0;
+  background-color: #15181b;
+}
+.mid {
+  height: 100%;
+  width: 5%;
+  left: 55%;
+  background-color: #9f8ee9;
+  overflow: hidden;
+}
+.centered img.avatar {
+  width: 45px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: #9f8ee9; /* Ensure background matches the mid section color */
+  transition: transform 0.8s ease; /* Add transition effect */
+}
+.centered img.avatar:hover {
+  transform: translateY(-20px); /* Move the image up by 10px on hover */
+}
+/* Style the image inside the centered container, if needed */
+.centered img {
+  left: 50%;
+  top: 50%;
+}
+/* Control the right side */
+.right {
+  height: 100%;
+  width: 41.5%;
+  right: 0;
+  background-color: #15181b;
+}
+/*Right side styling*/
+/* Header Section */
+.header-section {
+  margin-left: 25px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+.event-title {
+  font-size: 26px;
+  line-height: 32.5px;
+  width: 288px;
+  height: 50px;
+  top: 51px;
+  left: 958px;
+}
+.event-name {
+  font-size: 50px;
+  line-height: 71.25px;
+  width: 352px;
+  height: 55px;
+  top: 198px;
+  left: 958px;
+  gap: 0px;
+  text-align: left;
+}
+
+.event-details {
+  color: #add8e6;
+  font-family: "Lexend", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 28px;
+  width: 379px;
+  height: 20px;
+  top: 290px;
+  left: 964px;
+  gap: 26px;
+}
+/* Event Description */
+.event-description {
+  margin-left: 25px;
+  font-family: "Lexend", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 24px;
+  width: 100%;
+  height: 75px;
+  top: 339px;
+  left: 964px;
+  gap: 0px;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 0.15000000596046448px;
+}
+/* Artist Lineup */
+.artist-lineup {
+  font-family: "Lexend", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 32.5px;
+  width: 100%;
+  height: 200px;
+  top: 470px;
+  left: 964px;
+  gap: 0px;
+  color: #fff;
+  text-align: left;
+}
+.artist-image {
+  display: flex;
+  flex-wrap: wrap;
+  top: 543px;
+  left: 1084px;
+}
+.panel {
+  max-width: 31.333%;
+  margin: 10px;
+  padding: 0 10px;
+  height: 240px;
+  flex: 1;
+}
+.panel:hover {
+  transform: scale(1.2); /* Increase size by 10% on hover */
+}
+.artist-image img {
+  width: 105%;
+  height: 60%;
+}
+/* QR Code Section */
+.qr-code-section {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.qr-code {
+  width: 70px;
+  height: 70px;
+  top: 884px;
+  left: 949px;
+  gap: 0px;
+  border-radius: 6px;
+}
+
+.waitlist-button {
+  background-color: #add8e6;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 0px;
+  margin-left: 60%;
+  cursor: pointer;
+}
+
+.waitlist-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff; /* White text color */
+  font-family: Arial, sans-serif; /* Sans-serif font */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.bg-image {
+  position: absolute;
+  width: 361px; /* Adjust width as needed */
+  height: 590px; /* Adjust height as needed */
+  top: 65px; /* Adjust top position as needed */
+  left: 18px; /* Adjust left position as needed */
+}
+.bg-image img {
+  width: 80%;
+  height: 80%;
+}
+.bg-image .bg-text {
+  position: absolute;
+  font-family: Lexend, sans-serif; /* Lexend font */
+  font-size: 128px; /* Adjust font size as needed */
+  font-weight: 700; /* Bold font weight */
+  line-height: 118px; /* Adjust line height as needed */
+  text-align: left; /* Left align text */
+  color: #fff; /* White text color */
+  width: 100%; /* Occupy full width */
+  bottom: 0; /* Align text to the bottom */
+  padding: 20px; /* Add padding to the text */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  margin-top: 80px;
+  margin-left: 250px;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 12px;
+}
+.carousel-item img {
+  width: 265px; /* Adjust width as needed */
+  height: 420px; /* Adjust height as needed */
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateX(-50px); /* Start position off-screen */
+  }
+  100% {
+    opacity: 1; /* End with opacity 1 */
+    transform: translateX(0); /* End position on-screen */
+  }
+}
+
+/* Apply animation to each carousel item with delay */
+.carousel-item:nth-child(1) img {
+  animation: slide-in 0.5s ease 0s forwards; /* Delay for the first item */
+}
+
+.carousel-item:nth-child(2) img {
+  animation: slide-in 0.5s ease 0.1s forwards; /* Delay for the second item */
+}
+
+.carousel-item:nth-child(3) img {
+  animation: slide-in 0.5s ease 0.2s forwards; /* Delay for the third item */
+}
+
+.carousel-item:nth-child(4) img {
+  animation: slide-in 0.5s ease 0.3s forwards; /* Delay for the fourth item */
+}
+
+.carousel-item:nth-child(5) img {
+  animation: slide-in 0.5s ease 0.4s forwards; /* Delay for the fifth item */
+}
+
+/* Add tablet-specific styles */
+@media only screen and (max-width: 768px) {
+  .split {
+    width: 100%;
+  }
+
+  .split.left,
+  .split.mid,
+  .split.right {
+    position: static;
+    width: 100%;
+  }
+
+  .left,
+  .mid,
+  .right {
+    width: 100%;
+    background-color: #15181b;
+  }
+
+  .carousel-inner {
+    margin: 0 auto;
+  }
+
+  .carousel-item img {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+  }
+
+  /* Add other responsive styles as needed */
+}
